@@ -1,4 +1,4 @@
-<a href="/DataPribadi/pribadicreate"> Tambah Data</a>
+<a href="/datapribadi/pribadicreate"> Tambah Data</a>
 <table border="1">
 <tr>
         <th>NIK</th>

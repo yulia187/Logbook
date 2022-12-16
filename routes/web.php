@@ -4,9 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\logbookController;
 use App\Http\Controllers\DataPribadiController;
-use App\Http\Controllers\datapendidikanController;
-use App\Http\Controllers\databpjsController;
-use App\Http\Controllers\masakerjakaryawanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,16 +21,25 @@ Route::get('/', function () {
 
 Route::get('/logbook',[logbookController::class,'index']);
 Route::get('/logbook/create',[logbookController::class,'create']);
-Route::post('/logbook/datakaryawan',[logbookController::class,'datakaryawan']);
 
 Route::get('/DataPribadi',[DataPribadiController::class,'DataPribadi']);
 Route::get('/DataPribadi/pribadicreate',[DataPribadiController::class,'pribadicreate']);
 
-Route::get('/datapendidikan',[datapendidikanController::class,'datapend']);
-Route::get('/datapendidikan/pendcreate',[datapendidikanController::class,'pendcreate']);
+Auth::routes();
 
-Route::get('/databpjs',[databpjsController::class,'dtbpjs']);
-Route::get('/databpjs/bpjscreate',[databpjsController::class,'bpjscreate']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
 
-Route::get('/masakerjakaryawan',[masakerjakaryawanController::class,'msKK']);
-Route::get('/masakerjakaryawan/mskkcreate',[masakerjakaryawanController::class,'mskkcreate']);
+Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('dashboard');
+
+Route::group(['middleware' => 'auth'], function () {
+	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
+	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
+	Route::patch('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
+	Route::patch('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
+});
+
+Route::group(['middleware' => 'auth'], function () {
+	Route::get('{page}', ['as' => 'page.index', 'uses' => 'App\Http\Controllers\PageController@index']);
+});
+
