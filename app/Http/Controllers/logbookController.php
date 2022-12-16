@@ -17,4 +17,9 @@ class logbookController extends Controller
     {
         return view('logbook.create');
     }
+    public function datakaryawan(Request $request)
+    {
+        //dd($request->except(['token','submit']));
+        logbook::create($request->except(['token','submit']));
+    }
 }

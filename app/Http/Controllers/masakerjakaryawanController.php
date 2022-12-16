@@ -15,4 +15,9 @@ class masakerjakaryawanController extends Controller
     {
         return view('masakerjakaryawan.mskkcreate');
     }
+    public function mskksave(Request $request)
+    {
+        //dd($request->except(['token','submit']));
+        masakerjakaryawan::create($request->except(['token','submit']));
+    }
 }

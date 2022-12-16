@@ -16,5 +16,9 @@ class datapendidikanController extends Controller
     {
         return view('datapendidikan.pendcreate');
     }
-
+    public function pendidikansave(Request $request)
+    {
+        //dd($request->except(['token','submit']));
+        datapendidikan::create($request->except(['token','submit']));
+    }
 }

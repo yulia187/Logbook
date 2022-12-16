@@ -16,4 +16,9 @@ class databpjsController extends Controller
     {
         return view('databpjs.bpjscreate');
     }
+    public function bpjssave(Request $request)
+    {
+        //dd($request->except(['token','submit']));
+        databpjs::create($request->except(['token','submit']));
+    }
 }

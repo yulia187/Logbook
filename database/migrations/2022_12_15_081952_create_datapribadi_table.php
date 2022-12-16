@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('NO_HP2');
             $table->string('Email');
             $table->string('Agama');
-            $table->enum('Status_Karyawan',['Belum Menikah','Menikah','Cerai Hidup','Cerai Mati']);
+            $table->string('Status_Karyawan');
             $table->string('NoKartuKeluarga');
             $table->string('Nama_Pasangan');
             $table->string('Jumlah_Anak');

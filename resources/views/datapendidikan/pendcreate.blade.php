@@ -1,6 +1,7 @@
 <h1> TAMBAH DATA </h1>
 
-<form action="">
+<form action="/datapendidikan/pendidikansave" method="post">
+        @csrf
     <input type="text" name="NoInduk" placeholder="Nik"><br>
     <input type="text" name="NamaPegawai" placeholder="Nama Karyawan"><br>
     <input type="text" name="TingkatPend" placeholder="Tingkat Pendidikan"><br>
@@ -10,8 +11,8 @@
     <input type="text" name="TahunLulus" placeholder="Tahun Lulus"><br>     
     <input type="text" name="IPK" placeholder="IPK"><br> 
     <input type="text" name="Training" placeholder="Training"><br>
-    <input type="text" name="Sertfikat" placeholder="Sertifikat"><br>     
+    <input type="text" name="Sertifikasi" placeholder="Sertifikasi"><br>     
     <input type="text" name="Keahlian" placeholder="Keahlian"><br>     
     <input type="text" name="Pengalaman" placeholder="Pengalaman"><br>     
-       
+    <input type="submit" name="submit" value="save">
 </form>

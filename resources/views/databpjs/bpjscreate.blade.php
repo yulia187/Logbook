@@ -1,6 +1,7 @@
 <h1> TAMBAH DATA </h1>
 
-<form action="">
+<form action="/databpjs/bpjssave" method="post">
+        @csrf
     <input type="text" name="NInduk" placeholder="Nik"><br>
     <input type="text" name="NmPegawai" placeholder="Nama Karyawan"><br>
     <input type="text" name="NoBPJSKesehatan" placeholder="No BPJS Kesehatan"><br>
@@ -9,5 +10,5 @@
     <input type="date" name="TglBPJSTK" placeholder="Tanggal BPJSTK"><br>
     <input type="text" name="JnsPrgrm" placeholder="Jenis Program"><br>     
     <input type="date" name="BlnAktivasi" placeholder="Bulan Aktivasi"><br>   
-       
+    <input type="submit" name="submit" value="save">  
 </form>

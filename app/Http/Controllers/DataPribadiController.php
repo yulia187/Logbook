@@ -15,6 +15,10 @@ class DataPribadiController extends Controller
     {
         return view('DataPribadi.pribadicreate');
     }
-
+    public function pribadisave(Request $request)
+    {
+        //dd($request->except(['token','submit']));
+        datapribadi::create($request->except(['token','submit']));
+    }
 
 }

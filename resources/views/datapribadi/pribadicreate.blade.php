@@ -1,8 +1,10 @@
 <h1> TAMBAH DATA </h1>
 
-<form action="">
+<form action="/datapribadi/pribadisave" method="post">
+        @csrf
     <input type="text" name="Nik" placeholder="Nik"><br>
-    <input type="text" name="Nama" placeholder="Nama Karyawan"><br>
+    <input type="text" name="Nama_Karyawan" placeholder="Nama Karyawan"><br>
+    <input type="text" name="Nama_Panggilan" placeholder="Nama Karyawan"><br>
     <input type="text" name="Alamat_KTP" placeholder="Alamat Sesuai KTP"><br>
     <input type="text" name="Alamat_Tinggal" placeholder="Alamat Tempat Tinggal"><br>
     <input type="text" name="NoTelp_Rumah" placeholder="No Telp Rumah"><br>    
@@ -28,5 +30,5 @@
     <input type="text" name="NoKartuKeluarga" placeholder="No Kartu Keluarga"><br>
     <input type="text" name="Nama_Pasangan" placeholder="Nama Pasangan"><br>     
     <input type="text" name="Jumlah_Anak" placeholder="Jumlah Anak"><br>     
-       
+    <input type="submit" name="submit" value="save">
 </form>

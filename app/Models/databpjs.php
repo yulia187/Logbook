@@ -9,4 +9,5 @@ class databpjs extends Model
 {
     use HasFactory;
     protected $table = 'databpjs';
+    protected $guarded =[];
 }

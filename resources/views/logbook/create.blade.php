@@ -2,7 +2,7 @@
 
 <form action="/logbook/datakaryawan" method="post">
         @csrf
-<select name="Nama Perusahaan">
+<select name="Nama_Perusahaan">
         <option value="">Pilih Nama Perusahaan</option>
         <option value="PLKK">PT PLKK</option>
         <option value="BBK">PT BBK</option>
@@ -13,26 +13,26 @@
         <option value="JMS">PT JMS</option>
         <option value="PRVT">Private</option>
 </select> <br>  
-<select name="Jenis Karyawan">
+<select name="Jenis_Karyawan">
         <option value="">Jenis Karyawan</option>
         <option value="TTP">Tetap</option>
         <option value="KTR">Kontrak</option>
         <option value="HRN">Harian</option>
         <option value="EKS">Eksternal</option>
 </select> <br>    
-    <input type="text" name="Nik" placeholder="Nik"><br>
-    <input type="text" name="Nama" placeholder="Nama Karyawan"><br>
-    <input type="text" name="Tanggal Mulai Bekerja" placeholder="Tanggal Mulai Bekerja"><br>
-    <input type="text" name="No KTP" placeholder="No KTP"><br>
-    <input type="text" name="No NPWP" placeholder="No NPWP"><br>    
-    <input type="text" name="Tempat Lahir" placeholder="Tempat Lahir"><br>
-    <input type="date" name="Tanggal Lahir" placeholder="Tanggal Lahir"><br>
-    <select name="Jenis Kelamin">
+    <input type="text" name="Ninduk" placeholder="Nik"><br>
+    <input type="text" name="NamKaryawan" placeholder="Nama_Karyawan"><br>
+    <input type="date" name="TanggalMulaiBekerja" placeholder="Tanggal Mulai Bekerja"><br>
+    <input type="text" name="No_KTP" placeholder="No KTP"><br>
+    <input type="text" name="No_NPWP" placeholder="No NPWP"><br>    
+    <input type="text" name="Tempat_Lahir" placeholder="Tempat Lahir"><br>
+    <input type="date" name="Tanggal_Lahir" placeholder="Tanggal Lahir"><br>
+    <select name="Jenis_Kelamin">
         <option value="">Pilih Jenis Kelamin</option>
         <option value="L">Laki-Laki</option>
         <option value="P">Perempuan</option>
 </select> <br>
-    <select name="Lokasi Penempatan">
+    <select name="Lokasi_Penempatan">
         <option value="">Lokasi Penempatan</option>
         <option value="KCS">KC Balikpapan</option>
         <option value="KCS">KC Samboja</option>
@@ -162,11 +162,11 @@
         <option value="WLDR">Welder</option>
         <option value="WMGR">Workshop Manager</option>
     </select> <br>      
-    <select name="Status Karyawan">
+    <select name="Status_Karyawan">
         <option value="">Status Karyawan</option>
         <option value="AKT">Aktif</option>
         <option value="TA">Tidak Aktif</option>
         </select> <br> 
-        <input type="file" name="upload" placeholder="upload file"><br>
+        <input type="file" name="Upload_Foto" placeholder="upload file"><br>
         <input type="submit" name="submit" value="save">
 </form>

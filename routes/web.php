@@ -28,12 +28,16 @@ Route::post('/logbook/datakaryawan',[logbookController::class,'datakaryawan']);
 
 Route::get('/DataPribadi',[DataPribadiController::class,'DataPribadi']);
 Route::get('/DataPribadi/pribadicreate',[DataPribadiController::class,'pribadicreate']);
+Route::post('/datapribadi/pribadisave',[DataPribadiController::class,'pribadisave']);
 
 Route::get('/datapendidikan',[datapendidikanController::class,'datapend']);
 Route::get('/datapendidikan/pendcreate',[datapendidikanController::class,'pendcreate']);
+Route::post('/datapendidikan/pendidikansave',[datapendidikanController::class,'pendidikansave']);
 
 Route::get('/databpjs',[databpjsController::class,'dtbpjs']);
 Route::get('/databpjs/bpjscreate',[databpjsController::class,'bpjscreate']);
+Route::post('/databpjs/bpjssave',[databpjsController::class,'bpjssave']);
 
 Route::get('/masakerjakaryawan',[masakerjakaryawanController::class,'msKK']);
 Route::get('/masakerjakaryawan/mskkcreate',[masakerjakaryawanController::class,'mskkcreate']);
+Route::post('/masakerjakaryawan/mskksave',[masakerjakaryawanController::class,'mskksave']);
