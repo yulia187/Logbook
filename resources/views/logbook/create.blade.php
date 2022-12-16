@@ -1,7 +1,6 @@
 <h1> TAMBAH DATA </h1>
 
-<form action="/logbook/datakaryawan" method="post">
-        @csrf
+<form action="">
 <select name="Nama Perusahaan">
         <option value="">Pilih Nama Perusahaan</option>
         <option value="PLKK">PT PLKK</option>
@@ -34,7 +33,6 @@
 </select> <br>
     <select name="Lokasi Penempatan">
         <option value="">Lokasi Penempatan</option>
-        <option value="KCS">KC Balikpapan</option>
         <option value="KCS">KC Samboja</option>
         <option value="KIB">KIB</option>
         <option value="PJT">Project</option>
@@ -168,5 +166,5 @@
         <option value="TA">Tidak Aktif</option>
         </select> <br> 
         <input type="file" name="upload" placeholder="upload file"><br>
-        <input type="submit" name="submit" value="save">
+
 </form>
